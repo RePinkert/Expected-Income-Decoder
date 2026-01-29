@@ -143,44 +143,45 @@ def main():
                 return
 
     # 新数据输入
-    print("【输入新数据】")
-    print("  提示：支持CSV格式输入，如 5512,7.0,1234.00 或 5255,,")
-    print("  空值将使用历史数据（如有）或继续单独输入")
-    print()
-
-    # CSV 快速输入或逐个输入
     london_price = None
     exchange_rate = None
     actual_au9999 = None
 
-    # 首先尝试 CSV 输入
-    csv_input = input("请输入数据（CSV格式或直接回车逐个输入）: ").strip()
+    # 只有存在历史数据时才支持 CSV 快捷输入
+    if saved_data:
+        print("【CSV快捷输入】")
+        print("  格式：伦敦金,汇率,AU9999（空值使用历史数据）")
+        print("  示例：5512,7.0,1234.00 或 ,,1277 或 5550,,")
+        print()
 
-    if csv_input and ',' in csv_input:
-        # CSV 模式：解析并填充历史值
-        current = (
-            saved_data.get('london_price', None) if saved_data else None,
-            saved_data.get('exchange_rate', None) if saved_data else None,
-            saved_data.get('actual_au9999', None) if saved_data else None
-        )
-        parts = csv_input.split(',')
-        if parts[0].strip():
-            london_price = float(parts[0].strip())
-        if len(parts) > 1 and parts[1].strip():
-            exchange_rate = float(parts[1].strip())
-        if len(parts) > 2 and parts[2].strip():
-            actual_au9999 = float(parts[2].strip())
+        csv_input = input("请输入（CSV格式或直接回车后逐个输入）: ").strip()
 
-        # 对于空值，使用历史数据或继续单独输入
-        if not london_price and current[0] is not None:
-            london_price = current[0]
-            print(f"使用历史伦敦金价格: {london_price:.2f}")
-        if not exchange_rate and current[1] is not None:
-            exchange_rate = current[1]
-            print(f"使用历史汇率: {exchange_rate:.4f}")
-        if not actual_au9999 and current[2] is not None:
-            actual_au9999 = current[2]
-            print(f"使用历史AU9999价格: {actual_au9999:.2f}")
+        if csv_input and ',' in csv_input:
+            current = (
+                saved_data['london_price'],
+                saved_data['exchange_rate'],
+                saved_data['actual_au9999']
+            )
+            parts = csv_input.split(',')
+            if parts[0].strip():
+                london_price = float(parts[0].strip())
+            if len(parts) > 1 and parts[1].strip():
+                exchange_rate = float(parts[1].strip())
+            if len(parts) > 2 and parts[2].strip():
+                actual_au9999 = float(parts[2].strip())
+
+            if not london_price:
+                london_price = current[0]
+                print(f"使用历史伦敦金价格: {london_price:.2f}")
+            if not exchange_rate:
+                exchange_rate = current[1]
+                print(f"使用历史汇率: {exchange_rate:.4f}")
+            if not actual_au9999:
+                actual_au9999 = current[2]
+                print(f"使用历史AU9999价格: {actual_au9999:.2f}")
+    else:
+        print("【输入新数据】")
+        print()
 
     # 单独输入缺失的值
     if london_price is None:
