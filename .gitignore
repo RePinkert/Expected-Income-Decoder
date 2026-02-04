@@ -1,2 +1,7 @@
 # 忽略用户数据文件
 gold_data.json
+
+# 忽略字体文件（用户需自行下载）
+fonts/*.otf
+fonts/*.ttf
+fonts/*.ttc
