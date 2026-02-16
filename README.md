@@ -1,5 +1,24 @@
 # 黄金内外盘价差分析工具
 
+```python
+# 🧧 新春bonus 🧧
+
+for street in streets:
+    for mouth in (person.mouth for person in street.people):
+        first_sentence = mouth.pop()
+        assert first_sentence == "恭喜恭喜"
+
+while True:
+    try:
+        wealth.accumulate()
+        bugs.banish()
+        happiness.maximize()
+    except KeyboardInterrupt:
+        break
+    finally:
+        print("新年快乐，代码无 Bug！")
+```
+
 ## 项目简介
 
 基于国内AU9999金条和伦敦金的当前价格，分析两者之间的价差关系，帮助快速判断黄金市场的套利机会和价格偏离程度。
