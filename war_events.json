@@ -1,0 +1,176 @@
+{
+  "iran_retaliation": {
+    "name": "伊朗自卫反击战 (Iran Retaliation)",
+    "name_en": "Iran Retaliation",
+    "start": "2025-06-13",
+    "end": null,
+    "color": "#e74c3c",
+    "events": [
+      {"date": "2025-06-13", "label": "以色列空袭伊朗核设施", "type": "start"},
+      {"date": "2025-06-13", "label": "伊朗发射数百枚导弹反击", "type": "military"},
+      {"date": "2025-06-14", "label": "以色列多地遭袭", "type": "military"},
+      {"date": "2025-06-15", "label": "美国介入调停", "type": "political"}
+    ]
+  },
+  "gulf_war": {
+    "name": "海湾战争 (Gulf War)",
+    "name_en": "Gulf War",
+    "start": "1990-08-02",
+    "end": "1991-02-28",
+    "color": "#f39c12",
+    "events": [
+      {"date": "1990-08-02", "label": "伊拉克入侵科威特", "type": "start"},
+      {"date": "1990-08-06", "label": "联合国制裁决议", "type": "political"},
+      {"date": "1990-08-08", "label": "美军进驻沙特", "type": "military"},
+      {"date": "1991-01-17", "label": "沙漠风暴行动开始", "type": "military"},
+      {"date": "1991-02-24", "label": "地面进攻开始", "type": "military"},
+      {"date": "1991-02-28", "label": "停火", "type": "end"}
+    ]
+  },
+  "iraq_war": {
+    "name": "伊拉克战争 (Iraq War)",
+    "name_en": "Iraq War",
+    "start": "2003-03-20",
+    "end": "2011-12-18",
+    "color": "#9b59b6",
+    "events": [
+      {"date": "2003-03-20", "label": "美军入侵伊拉克", "type": "start"},
+      {"date": "2003-04-09", "label": "巴格达沦陷", "type": "military"},
+      {"date": "2003-05-01", "label": "布什宣布主要战事结束", "type": "political"},
+      {"date": "2003-12-13", "label": "萨达姆被捕", "type": "political"},
+      {"date": "2006-12-30", "label": "萨达姆处决", "type": "political"},
+      {"date": "2011-12-18", "label": "美军撤离", "type": "end"}
+    ]
+  },
+  "afghanistan_war": {
+    "name": "阿富汗战争 (Afghanistan War)",
+    "name_en": "Afghanistan War",
+    "start": "2001-10-07",
+    "end": "2021-08-30",
+    "color": "#2ecc71",
+    "events": [
+      {"date": "2001-10-07", "label": "持久自由行动开始", "type": "start"},
+      {"date": "2001-11-13", "label": "喀布尔沦陷", "type": "military"},
+      {"date": "2001-12-09", "label": "塔利班政权倒台", "type": "military"},
+      {"date": "2003-05-01", "label": "主要作战结束", "type": "political"},
+      {"date": "2011-05-02", "label": "本·拉登被击毙", "type": "military"},
+      {"date": "2014-12-28", "label": "北约结束战斗任务", "type": "political"},
+      {"date": "2020-02-29", "label": "美国与塔利班签署和平协议", "type": "political"},
+      {"date": "2021-08-15", "label": "塔利班重占喀布尔", "type": "military"},
+      {"date": "2021-08-30", "label": "美军完全撤离", "type": "end"}
+    ]
+  },
+  "vietnam_war": {
+    "name": "越南战争 (Vietnam War)",
+    "name_en": "Vietnam War",
+    "start": "1964-08-04",
+    "end": "1975-04-30",
+    "color": "#1abc9c",
+    "events": [
+      {"date": "1964-08-04", "label": "北部湾事件", "type": "start"},
+      {"date": "1965-03-08", "label": "美军地面部队登陆", "type": "military"},
+      {"date": "1968-01-30", "label": "春节攻势", "type": "military"},
+      {"date": "1969-06-08", "label": "尼克松宣布撤军", "type": "political"},
+      {"date": "1970-04-30", "label": "美军入侵柬埔寨", "type": "military"},
+      {"date": "1973-01-27", "label": "巴黎和平协定签署", "type": "political"},
+      {"date": "1973-03-29", "label": "美军完全撤离", "type": "military"},
+      {"date": "1975-04-30", "label": "西贡沦陷", "type": "end"}
+    ]
+  },
+  "korean_war": {
+    "name": "朝鲜战争 (Korean War)",
+    "name_en": "Korean War",
+    "start": "1950-06-25",
+    "end": "1953-07-27",
+    "color": "#3498db",
+    "events": [
+      {"date": "1950-06-25", "label": "朝鲜入侵韩国", "type": "start"},
+      {"date": "1950-06-27", "label": "联合国授权军事干预", "type": "political"},
+      {"date": "1950-09-15", "label": "仁川登陆", "type": "military"},
+      {"date": "1950-10-19", "label": "中国志愿军参战", "type": "military"},
+      {"date": "1951-07-10", "label": "停战谈判开始", "type": "political"},
+      {"date": "1953-07-27", "label": "停战协定签署", "type": "end"}
+    ]
+  },
+  "kosovo_war": {
+    "name": "科索沃战争 (Kosovo War)",
+    "name_en": "Kosovo War",
+    "start": "1999-03-24",
+    "end": "1999-06-10",
+    "color": "#e67e22",
+    "events": [
+      {"date": "1999-03-24", "label": "北约空袭南联盟", "type": "start"},
+      {"date": "1999-04-06", "label": "外交斡旋失败", "type": "political"},
+      {"date": "1999-05-07", "label": "误炸中国大使馆", "type": "military"},
+      {"date": "1999-06-09", "label": "南联盟接受和平协议", "type": "political"},
+      {"date": "1999-06-10", "label": "北约停止空袭", "type": "end"}
+    ]
+  },
+  "panama_invasion": {
+    "name": "巴拿马入侵 (Panama Invasion)",
+    "name_en": "Panama Invasion",
+    "start": "1989-12-20",
+    "end": "1990-01-31",
+    "color": "#9b59b6",
+    "events": [
+      {"date": "1989-12-20", "label": "正义事业行动开始", "type": "start"},
+      {"date": "1989-12-24", "label": "诺列加藏匿梵蒂冈使馆", "type": "military"},
+      {"date": "1990-01-03", "label": "诺列加投降", "type": "military"},
+      {"date": "1990-01-31", "label": "行动结束", "type": "end"}
+    ]
+  },
+  "grenada_invasion": {
+    "name": "格林纳达入侵 (Grenada Invasion)",
+    "name_en": "Grenada Invasion",
+    "start": "1983-10-25",
+    "end": "1983-11-02",
+    "color": "#27ae60",
+    "events": [
+      {"date": "1983-10-25", "label": "紧急暴怒行动开始", "type": "start"},
+      {"date": "1983-10-27", "label": "美军控制全岛", "type": "military"},
+      {"date": "1983-11-02", "label": "行动结束", "type": "end"}
+    ]
+  },
+  "russo_ukrainian_war": {
+    "name": "俄乌战争 (Russo-Ukrainian War)",
+    "name_en": "Russo-Ukrainian War",
+    "start": "2022-02-24",
+    "end": null,
+    "color": "#16a085",
+    "events": [
+      {"date": "2022-02-24", "label": "俄罗斯全面入侵", "type": "start"},
+      {"date": "2022-03-02", "label": "联合国谴责决议", "type": "political"},
+      {"date": "2022-03-08", "label": "美国石油禁运", "type": "political"},
+      {"date": "2022-04-02", "label": "布查事件曝光", "type": "political"},
+      {"date": "2022-09-21", "label": "俄罗斯部分动员", "type": "military"},
+      {"date": "2022-09-30", "label": "俄罗斯吞并四州", "type": "political"},
+      {"date": "2023-06-23", "label": "瓦格纳兵变", "type": "political"},
+      {"date": "2024-02-17", "label": "阿夫迪夫卡沦陷", "type": "military"}
+    ]
+  },
+  "yom_kippur_war": {
+    "name": "赎罪日战争 (Yom Kippur War)",
+    "name_en": "Yom Kippur War",
+    "start": "1973-10-06",
+    "end": "1973-10-25",
+    "color": "#f1c40f",
+    "events": [
+      {"date": "1973-10-06", "label": "阿拉伯国家突袭", "type": "start"},
+      {"date": "1973-10-17", "label": "石油禁运开始", "type": "political"},
+      {"date": "1973-10-22", "label": "联合国停火决议", "type": "political"},
+      {"date": "1973-10-25", "label": "停火生效", "type": "end"}
+    ]
+  },
+  "six_day_war": {
+    "name": "六日战争 (Six-Day War)",
+    "name_en": "Six-Day War",
+    "start": "1967-06-05",
+    "end": "1967-06-10",
+    "color": "#2c3e50",
+    "events": [
+      {"date": "1967-06-05", "label": "以色列先发制人", "type": "start"},
+      {"date": "1967-06-07", "label": "占领东耶路撒冷", "type": "military"},
+      {"date": "1967-06-10", "label": "停火", "type": "end"}
+    ]
+  }
+}

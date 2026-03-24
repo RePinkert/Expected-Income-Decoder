@@ -33,7 +33,54 @@
 
 > ⚠️ **重要提示**：由于 akshare 无法直接获取伦敦金（XAU/USD）现货价格，本工具使用 **COMEX 黄金期货价格** 作为外盘参考。COMEX 期货与伦敦金现货之间存在基差（通常几美元），因此价差计算结果可能与实际伦敦金换算结果略有差异。
 
-### 2. 黄金定投策略收益分析 (`gold_dip_return_analysis.ipynb`)
+### 2. 黄金战争期间价格可视化 (`gold_war_visualization.ipynb`)
+
+分析历次战争期间黄金价格的表现，探究地缘政治危机对黄金避险属性的影响。
+
+**覆盖战争（12场）：**
+
+#### 当前热点
+| 战争 | 时间段 | 类型 |
+|------|--------|------|
+| 伊朗自卫反击战 | 2025.06-至今 | 中东冲突 |
+| 俄乌战争 | 2022.02-至今 | 代理人战争 |
+
+#### 美国主导战争
+| 战争 | 时间段 | 持续时间 |
+|------|--------|----------|
+| 阿富汗战争 | 2001.10-2021.08 | 20年 |
+| 伊拉克战争 | 2003.03-2011.12 | 8年 |
+| 海湾战争 | 1990.08-1991.02 | 7个月 |
+| 科索沃战争 | 1999.03-1999.06 | 78天 |
+| 巴拿马入侵 | 1989.12-1990.01 | 42天 |
+| 格林纳达入侵 | 1983.10-1983.11 | 8天 |
+| 越南战争 | 1964.08-1975.04 | 11年 |
+| 朝鲜战争 | 1950.06-1953.07 | 3年 |
+
+#### 中东战争
+| 战争 | 时间段 | 持续时间 |
+|------|--------|----------|
+| 赎罪日战争 | 1973.10 | 19天 |
+| 六日战争 | 1967.06 | 6天 |
+
+**功能特性：**
+
+- 双数据源支持：akshare（2016年至今）或 CSV 文件（1970年至今）
+- 战争事件时间线标注（开战、停火、重大战役、政治事件）
+- 单战争期间价格走势分析
+- 多战争归一化对比图（战争开始日=100）
+- 统计汇总与可视化
+
+**数据源配置：**
+
+| 数据源 | 时间范围 | 覆盖战争 |
+|--------|----------|----------|
+| akshare（自动） | 2016-至今 | 俄乌战争、伊朗自卫反击战 |
+| Investing.com CSV（手动） | 1970-至今 | 全部12场战争 |
+
+> **CSV 下载方法**：访问 [Investing.com 黄金历史数据](https://www.investing.com/commodities/gold-historical-data)，设置日期范围为 1970-01-01 至今，下载后保存为 `gold_price_history.csv`。
+
+### 3. 黄金定投策略收益分析 (`gold_dip_return_analysis.ipynb`)
 
 基于历史数据的定投策略回测与可视化分析。
 
@@ -63,10 +110,13 @@
 
 **依赖库：**
 ```bash
-pip install akshare pandas numpy matplotlib seaborn ipywidgets
+pip install akshare pandas numpy matplotlib seaborn ipywidgets plotly nbformat
 ```
 
-> 注：`ipywidgets` 用于支持 Jupyter 中的 tqdm 进度条显示，避免 COMEX 期货数据获取时出现 IProgress 错误。
+> **依赖说明：**
+> - `ipywidgets`：支持 Jupyter 中的 tqdm 进度条显示
+> - `nbformat>=4.2.0`：**必需**，Plotly 在 Jupyter Notebook 中渲染交互式图表所依赖的库
+> - 如不想安装 nbformat，可在代码中设置 `pio.renderers.default = "browser"` 在浏览器中查看图表
 
 ## 使用方法
 
@@ -84,7 +134,9 @@ pip install akshare pandas numpy matplotlib seaborn ipywidgets
 |------|------|
 | `gold_price_converter.ipynb` | 内外盘价差分析 Notebook |
 | `gold_dip_return_analysis.ipynb` | 定投策略回测 Notebook |
+| `gold_war_visualization.ipynb` | 战争期间黄金价格可视化 Notebook |
 | `gold_price_converter.py` | 价差分析 Python 脚本版本 |
+| `war_events.json` | 战争事件时间线数据 |
 | `fonts/` | 思源黑体字体文件 |
 
 ## 免责声明
